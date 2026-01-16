@@ -3,10 +3,39 @@
 <head>
 <title>jQuery Program</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+body{
+  font-family: Arial;
+}
+.section{
+  border:1px solid black;
+  padding:15px;
+  margin-bottom:20px;
+  width:350px;
+}
+#text{
+  border:1px solid black;
+  width:100px;
+  padding:5px;
+  margin-top:10px;
+}
+#box{
+  width:100px;
+  height:100px;
+  border:1px solid black;
+  position:relative;
+  margin-top:10px;
+}
+button{
+  margin:5px 5px 5px 0;
+}
+</style>
 </head>
 
 <body>
 
+<div class="section">
 <h2>Append Text</h2>
 <button id="p">Add to Para</button>
 <button id="l">Add to List</button>
@@ -16,18 +45,22 @@
 <li>Item 1</li>
 <li>Item 2</li>
 </ul>
+</div>
 
+<div class="section">
 <h2>Font Size</h2>
 <button id="inc">+</button>
 <button id="dec">-</button>
 <div id="text">Text</div>
+</div>
 
+<div class="section">
 <h2>Color & Animation</h2>
 <input type="color" id="c">
 <button id="col">Color</button>
 <button id="mov">Move</button>
-
-<div id="box" style="width:100px;height:100px;border:1px solid black;position:relative;"></div>
+<div id="box"></div>
+</div>
 
 <script>
 // Append
