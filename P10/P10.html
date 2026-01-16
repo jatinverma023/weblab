@@ -2,7 +2,24 @@
 <html>
 <head>
 <title>AJAX & jQuery</title>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+body{
+  font-family: Arial;
+}
+div{
+  border:1px solid black;
+  width:300px;
+  height:80px;
+  padding:10px;
+  margin-bottom:10px;
+}
+button{
+  margin-bottom:20px;
+}
+</style>
 </head>
 
 <body>
@@ -28,22 +45,26 @@
 function loadText(){
   var x = new XMLHttpRequest();
   x.open("GET","content.txt",true);
-  x.onload = () => d1.innerHTML = x.responseText;
+  x.onload = function(){
+    d1.innerHTML = x.responseText;
+  }
   x.send();
 }
 
 // AJAX with jQuery
-$("#b2").click(() => $("#d2").load("content.txt"));
+$("#b2").click(function(){
+  $("#d2").load("content.txt");
+});
 
 // getJSON
-$("#b3").click(() =>
-  $.getJSON("data2.json", d =>
-    $("#d3").html(d.name+"<br>"+d.course+"<br>"+d.college)
-  )
-);
+$("#b3").click(function(){
+  $.getJSON("data2.json", function(d){
+    $("#d3").html(d.name+"<br>"+d.course+"<br>"+d.college);
+  });
+});
 
 // parseJSON
-$("#b4").click(() => {
+$("#b4").click(function(){
   var o = JSON.parse('{"name":"Jatin","course":"CS","college":"CMR"}');
   $("#d4").html(o.name+"<br>"+o.course+"<br>"+o.college);
 });
