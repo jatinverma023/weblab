@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TEDx Registration</title>
+
+<style>
+body{
+  background:#f2f2f2;
+  font-family: Arial;
+}
+
+.form-box{
+  width:500px;
+  margin:60px auto;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.header{
+  background:#e53935;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+.content{
+  background:#ffffff;
+  padding:20px;
+}
+
+label{
+  display:block;
+  margin-top:10px;
+  font-weight:bold;
+}
+
+input, select, textarea{
+  width:100%;
+  padding:8px;
+  margin-top:5px;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
+
+textarea{ resize:none; }
+
+.inline{
+  margin-top:5px;
+}
+
+.inline input{
+  width:auto;
+}
+
+.buttons{
+  margin-top:20px;
+  text-align:center;
+}
+
+button{
+  padding:10px 15px;
+  border:none;
+  border-radius:5px;
+  margin:5px;
+  cursor:pointer;
+}
+
+.submit{
+  background:#e53935;
+  color:white;
+}
+
+.reset{
+  background:#ccc;
+}
+</style>
+</head>
+
+<body>
+
+<form class="form-box">
+
+<div class="header">
+  <h2>TEDx Registration</h2>
+  <p>Register now to be part of the TEDx experience</p>
+</div>
+
+<div class="content">
+
+<label>Name</label>
+<input type="text" placeholder="Tom Ranger">
+
+<label>Age</label>
+<input type="number">
+
+<label>Email</label>
+<input type="email">
+
+<label>Password</label>
+<input type="password">
+
+<label>Country</label>
+<select>
+  <option>India</option>
+  <option>Argentina</option>
+  <option>Australia</option>
+</select>
+
+<label>Interests</label>
+<div class="inline">
+<input type="checkbox"> AI
+<input type="checkbox"> ML
+<input type="checkbox"> CV
+</div>
+
+<label>Gender</label>
+<div class="inline">
+<input type="radio" name="g"> Male
+<input type="radio" name="g"> Female
+</div>
+
+<label>DOB</label>
+<input type="date">
+
+<label>Short Bio</label>
+<textarea rows="4"></textarea>
+
+<div class="buttons">
+<button class="reset" type="reset">Reset</button>
+<button class="submit" type="submit">Submit</button>
+</div>
+
+</div>
+</form>
+
+</body>
+</html>

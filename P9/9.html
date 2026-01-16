@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Program</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<h2>Append Text</h2>
+<button id="p">Add to Para</button>
+<button id="l">Add to List</button>
+
+<p id="para">This is a paragraph.</p>
+<ul id="list">
+<li>Item 1</li>
+<li>Item 2</li>
+</ul>
+
+<h2>Font Size</h2>
+<button id="inc">+</button>
+<button id="dec">-</button>
+<div id="text">Text</div>
+
+<h2>Color & Animation</h2>
+<input type="color" id="c">
+<button id="col">Color</button>
+<button id="mov">Move</button>
+
+<div id="box" style="width:100px;height:100px;border:1px solid black;position:relative;"></div>
+
+<script>
+// Append
+$("#p").click(() => $("#para").append(" Appended text"));
+$("#l").click(() => $("#list").append("<li>New Item</li>"));
+
+// Font size
+$("#inc").click(() => $("#text").animate({fontSize:"+=5px"}));
+$("#dec").click(() => $("#text").animate({fontSize:"-=5px"}));
+
+// Color & move
+$("#col").click(() => $("#box").css("background",$("#c").val()));
+$("#mov").click(() => $("#box").animate({left:"+=100px"}));
+</script>
+
+</body>
+</html>

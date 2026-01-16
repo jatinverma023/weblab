@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AJAX & jQuery</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<h2>AJAX without jQuery</h2>
+<div id="d1"></div>
+<button onclick="loadText()">Load</button>
+
+<h2>AJAX with jQuery</h2>
+<div id="d2"></div>
+<button id="b2">Load</button>
+
+<h2>getJSON</h2>
+<div id="d3"></div>
+<button id="b3">Get JSON</button>
+
+<h2>parseJSON</h2>
+<div id="d4"></div>
+<button id="b4">Parse</button>
+
+<script>
+// AJAX without jQuery
+function loadText(){
+  var x = new XMLHttpRequest();
+  x.open("GET","content.txt",true);
+  x.onload = () => d1.innerHTML = x.responseText;
+  x.send();
+}
+
+// AJAX with jQuery
+$("#b2").click(() => $("#d2").load("content.txt"));
+
+// getJSON
+$("#b3").click(() =>
+  $.getJSON("data2.json", d =>
+    $("#d3").html(d.name+"<br>"+d.course+"<br>"+d.college)
+  )
+);
+
+// parseJSON
+$("#b4").click(() => {
+  var o = JSON.parse('{"name":"Jatin","course":"CS","college":"CMR"}');
+  $("#d4").html(o.name+"<br>"+o.course+"<br>"+o.college);
+});
+</script>
+
+</body>
+</html>

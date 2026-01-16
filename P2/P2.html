@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Time Table</title>
+
+<style>
+body{
+  display:flex;
+  justify-content:center;
+  margin-top:40px;
+  font-family: Arial;
+}
+
+/* Table styling */
+table{
+  border-collapse:collapse;
+  text-align:center;
+}
+
+/* Borders */
+th, td{
+  border:1px solid black;
+  padding:10px;
+}
+
+/* Header & Footer */
+thead td{
+  background:#c7d2fe;
+  font-weight:bold;
+}
+tfoot td{
+  background:#e5e7eb;
+  font-weight:bold;
+}
+
+/* Row colors */
+.monday{ background:#fef3c7; }
+.tuesday{ background:#ecfeff; }
+.wednesday{ background:#fce7f3; }
+.thursday{ background:#dcfce7; }
+.friday{ background:#f3e8ff; }
+
+/* Special cells */
+.break{ background:#e5e7eb; font-weight:bold; }
+.lab{ background:#34d399; color:black; }
+.elective{ background:#60a5fa; color:white; }
+</style>
+</head>
+
+<body>
+
+<table>
+
+<thead>
+<tr>
+<td colspan="10">TIME TABLE</td>
+</tr>
+<tr>
+<th>Day</th>
+<th>8–9</th>
+<th>9–10</th>
+<th>10–10:20</th>
+<th>10:20–11:20</th>
+<th>11:20–12:20</th>
+<th>12:20–1</th>
+<th>1–2</th>
+<th>2–3</th>
+<th>3–4</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr class="monday">
+<td>Monday</td>
+<td>RM</td>
+<td>AI</td>
+<td rowspan="6" class="break">SNACKS</td>
+<td colspan="2" class="lab">CN LAB</td>
+<td rowspan="6" class="break">LUNCH</td>
+<td>PTR</td>
+<td class="elective">TYL</td>
+<td class="elective">Aptitude</td>
+</tr>
+
+<tr class="tuesday">
+<td>Tuesday</td>
+<td>AI</td>
+<td>TOC</td>
+<td>MAD</td>
+<td>SEPM</td>
+<td>RM</td>
+<td>CN</td>
+<td class="elective">Soft Skills</td>
+</tr>
+
+<tr class="wednesday">
+<td>Wednesday</td>
+<td>AI</td>
+<td>TOC</td>
+<td>MAD</td>
+<td>SEPM</td>
+<td>RM</td>
+<td class="elective">Sports</td>
+<td class="elective">Soft Skills</td>
+</tr>
+
+<tr class="thursday">
+<td>Thursday</td>
+<td>AI</td>
+<td>TOC</td>
+<td>MAD</td>
+<td>SEPM</td>
+<td>RM</td>
+<td>CN</td>
+<td class="elective">Soft Skills</td>
+</tr>
+
+<tr class="friday">
+<td>Friday</td>
+<td>AI</td>
+<td>TOC</td>
+<td>MAD</td>
+<td>SEPM</td>
+<td>RM</td>
+<td>CN</td>
+<td class="elective">Soft Skills</td>
+</tr>
+
+<tr class="monday">
+<td>Saturday</td>
+<td colspan="2" class="lab">WEB LAB</td>
+<td>MAD</td>
+<td>SEPM</td>
+<td>RM</td>
+<td>CN</td>
+<td class="elective">Soft Skills</td>
+</tr>
+
+</tbody>
+
+<tfoot>
+<tr>
+<td colspan="10">5th Semester – Class B</td>
+</tr>
+</tfoot>
+
+</table>
+
+</body>
+</html>

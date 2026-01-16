@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JSON & CSV</title>
+</head>
+
+<body>
+
+<h2>JSON to JavaScript Object</h2>
+<pre id="o1"></pre>
+
+<h2>JSON Date</h2>
+<pre id="o2"></pre>
+
+<h2>JSON ↔ CSV</h2>
+<pre id="o3"></pre>
+<button onclick="toCSV()">JSON to CSV</button>
+<button onclick="toJSON()">CSV to JSON</button>
+
+<h2>Hash</h2>
+<input id="s" placeholder="Enter text">
+<button onclick="makeHash()">Hash</button>
+<pre id="o4"></pre>
+
+<script>
+// JSON to Object
+var j = '{"name":"Jey","age":20}';
+var o = JSON.parse(j);
+o1.innerHTML = o.name + "<br>" + o.age;
+
+// JSON Date
+var d = JSON.parse('{"date":"2024-09-17"}');
+o2.innerHTML = new Date(d.date).toDateString();
+
+// JSON to CSV
+function toCSV(){
+  var data = [
+    {id:1,name:"Jey",usn:"1CR23CS001"},
+    {id:2,name:"Kathit",usn:"1CR23CS002"}
+  ];
+  var csv = "id,name,usn\n";
+  data.forEach(r => csv += r.id+","+r.name+","+r.usn+"\n");
+  o3.innerHTML = csv;
+}
+
+// CSV to JSON
+function toJSON(){
+  var rows = o3.innerHTML.trim().split("\n");
+  var h = rows[0].split(",");
+  var arr = [];
+  for(let i=1;i<rows.length;i++){
+    let v = rows[i].split(",");
+    arr.push({id:v[0],name:v[1],usn:v[2]});
+  }
+  o3.innerHTML = JSON.stringify(arr);
+}
+
+// Hash (simple)
+function makeHash(){
+  let str = s.value, h = 0;
+  for(let c of str) h += c.charCodeAt(0);
+  o4.innerHTML = h;
+}
+</script>
+
+</body>
+</html>

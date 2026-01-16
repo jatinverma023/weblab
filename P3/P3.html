@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Electric Store</title>
+
+<style>
+body{
+  font-family: Arial;
+  margin:0;
+  background:#f4f6fb;
+}
+
+/* Header */
+h1{
+  text-align:center;
+  color:#3737ea;
+  margin:20px 0;
+}
+
+/* Navigation */
+.nav{
+  text-align:center;
+  background:#fff;
+  padding:15px;
+}
+.nav a{
+  text-decoration:none;
+  margin:0 15px;
+  color:black;
+  font-weight:bold;
+}
+.nav a:hover{
+  background:#5959eb;
+  color:white;
+  padding:8px;
+  border-radius:5px;
+}
+
+/* Products */
+h3{
+  text-align:center;
+  margin-top:30px;
+}
+
+.products{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin:20px;
+}
+
+.item{
+  width:200px;
+  background:white;
+  border-radius:10px;
+  box-shadow:0 5px 10px rgba(0,0,0,0.2);
+  overflow:hidden;
+}
+
+.item img{
+  width:100%;
+  height:180px;
+}
+
+.price{
+  text-align:center;
+  font-weight:bold;
+}
+
+.description{
+  height:80px;
+  padding:8px;
+  overflow-y:auto;
+  font-size:14px;
+}
+
+/* Reviews */
+.review{
+  width:60%;
+  margin:10px auto;
+  background:white;
+  padding:10px;
+  border-left:4px solid #5959eb;
+}
+
+/* Footer */
+footer{
+  background:#eee;
+  text-align:center;
+  padding:20px;
+  margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Electric Store</h1>
+
+<div class="nav">
+<a href="#">Home</a>
+<a href="#">Products</a>
+<a href="#">Profile</a>
+</div>
+
+<h3>Holiday Sales!</h3>
+
+<div class="products">
+
+<div class="item">
+<img src="img.png">
+<p class="price">Price : ₹500</p>
+<div class="description">
+This is a sample product on sale. High quality and best price.
+</div>
+</div>
+
+<div class="item">
+<img src="img.png">
+<p class="price">Price : ₹500</p>
+<div class="description">
+This is a sample product on sale. High quality and best price.
+</div>
+</div>
+
+<div class="item">
+<img src="img.png">
+<p class="price">Price : ₹500</p>
+<div class="description">
+This is a sample product on sale. High quality and best price.
+</div>
+</div>
+
+</div>
+
+<h3>Customer Reviews</h3>
+
+<div class="review">
+<h4>Ravi</h4>
+<p>This product is great</p>
+</div>
+
+<div class="review">
+<h4>Ankit</h4>
+<p>Very useful and affordable</p>
+</div>
+
+<footer>
+<p>This is Jey <br> &copy; Electric Store</p>
+</footer>
+
+</body>
+</html>

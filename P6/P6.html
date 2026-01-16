@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<style>
+body{
+  background:#eaeef7;
+  font-family: Arial;
+}
+.calc{
+  width:280px;
+  margin:80px auto;
+  padding:15px;
+  background:#2f3b52;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  text-align:center;
+}
+h3{ color:white; }
+input{
+  width:250px;
+  height:40px;
+  font-size:18px;
+  text-align:right;
+  border:none;
+  border-radius:6px;
+  padding-right:10px;
+  margin-bottom:10px;
+}
+button{
+  width:55px;
+  height:45px;
+  margin:4px;
+  font-size:16px;
+  border:none;
+  border-radius:6px;
+  background:#4e5d78;
+  color:white;
+}
+.op{ background:#ff8c42; }
+.fn{ background:#6c63ff; }
+.eq{ background:#38b000; }
+.cl{ background:#e63946; }
+</style>
+</head>
+
+<body>
+
+<div class="calc">
+<h3>Calculator</h3>
+<input id="d" readonly><br>
+
+<button onclick="add('7')">7</button>
+<button onclick="add('8')">8</button>
+<button onclick="add('9')">9</button>
+<button class="op" onclick="add('/')">/</button><br>
+
+<button onclick="add('4')">4</button>
+<button onclick="add('5')">5</button>
+<button onclick="add('6')">6</button>
+<button class="op" onclick="add('*')">*</button><br>
+
+<button onclick="add('1')">1</button>
+<button onclick="add('2')">2</button>
+<button onclick="add('3')">3</button>
+<button class="op" onclick="add('-')">-</button><br>
+
+<button onclick="add('0')">0</button>
+<button class="fn" onclick="square()">x²</button>
+<button class="fn" onclick="sqrt()">√</button>
+<button class="op" onclick="add('+')">+</button><br>
+
+<button class="fn" onclick="power()">xʸ</button>
+<button class="eq" onclick="calc()">=</button>
+<button class="cl" onclick="clr()">C</button>
+</div>
+
+<script>
+var d = document.getElementById("d");
+
+function add(v){ d.value += v; }
+function calc(){ d.value = eval(d.value); }
+function clr(){ d.value = ""; }
+
+function square(){
+  d.value = d.value * d.value;
+}
+
+function sqrt(){
+  d.value = Math.sqrt(d.value);
+}
+
+function power(){
+  var base = prompt("Enter base:");
+  var exp  = prompt("Enter exponent:");
+  d.value = Math.pow(base, exp);
+}
+</script>
+
+</body>
+</html>
